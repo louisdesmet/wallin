@@ -1,0 +1,570 @@
+@import url(http://db.onlinewebfonts.com/c/ffd0dcc47a9002be89cc7f900d4e144f?family=AvenirNextLTW01-UltraLight);
+
+@font-face {
+    font-family: MontReg;
+    src: url('../fonts/Montserrat-Regular.otf');   
+}
+
+@font-face {
+    font-family: Montlight;
+    src: url('../fonts/Montserrat-Light.otf');   
+}
+
+@font-face {
+    font-family: Montbold;
+    src: url('../fonts/Montserrat-Bold.otf');   
+}
+
+@font-face {
+    font-family: Montthin;
+    src: url('../fonts/Montserrat-Thin.otf');
+}
+
+@font-face {
+    font-family: Montsemibold;
+    src: url('../fonts/Montserrat-SemiBold.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    font-family: Montlight;
+}
+.body {
+    background: url(../img/background.jpg) repeat-y;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.containerdefault {
+    width: 75%;
+    margin: 0 auto;
+}
+.allcontainer {
+    width: 95%;
+    margin: 40px auto 0 auto;
+    background: white;
+    padding-top: 50px;
+}
+.nav {
+    height: 120px;
+    background: white;
+}
+
+.nav .logo {
+    float: left;
+    margin: 0 0 0 2.63%;
+    width: 120px;
+    padding-top: 8px;
+}
+
+.nav .logo img {
+    width: 100%;
+}
+
+.nav > ul {
+    float: right;
+    margin: 45px 2.63% 0 0;
+}
+
+.nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 0 2px;
+}
+
+.nav ul li .navlink {
+    display: block;
+    font-family: Montlight;
+    padding: 6px 10px;
+
+    font-size: 1.2em;
+
+}
+
+.nav ul li a:hover {
+    border-bottom: 2px solid black;
+}
+
+.nav ul li ul {
+    display: none;
+    width: 295px;
+    position: absolute;
+    top:30px;
+    left: -50px;
+    background: black;
+
+}
+
+.nav ul .muurlink:hover {
+    background: black!important;
+
+}
+
+.nav ul .muurlink:hover a {
+    color:white!important;  
+}
+
+.nav ul li ul li {
+    float: left;
+
+}
+
+.nav ul li ul li a {
+    display: block;
+    font-family: Montlight;
+    padding: 6px;
+    font-size: 1.2em;
+    color: white;
+    border: 0!important;
+
+}
+
+.nav ul li:hover ul {
+    display: block;
+
+}
+
+.nav ul li .submitwall {
+    background: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.nav ul li .submitwall:hover {
+    border:0;
+}
+
+
+
+
+
+.homeSlider {
+    overflow: hidden;
+    margin-top: 5px;
+    position: relative;   
+}
+
+.homeSlider img {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+.homeContainer h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.homeContainer p {
+    line-height: 24px;
+}
+
+
+.tablecelldivs {
+    display: table;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.ourstorytitle {
+
+    display: table-cell;
+    font-size: 1.6em;
+    font-family: Montbold;
+
+}
+
+.titleline {
+    width: auto;
+
+    display: table-cell;
+
+
+}
+
+.titleline div {
+    height: 3px;
+    background: black;
+    position: relative;
+    top: -5px;
+}
+
+.contactleft {
+    width: 48%;
+    box-sizing: border-box;
+    border-right: 3px solid white;
+    float: left;
+    padding-top: 60px;
+    margin: 0 4% 0 0;
+
+}
+
+.contactleft iframe {
+    width: 100%;
+    margin: 23px 0 50px 0;
+    display: block;
+    height: 280px;
+}
+
+
+
+.contactinfo {
+    display: block;
+    font-family: Montbold;
+    font-size: 1.3em;
+    margin: 0 0 13px 0;
+}
+
+.contactright {
+    width: 48%;
+    float: left;
+    padding-top: 60px;
+}
+
+.textinput {
+    padding: 11px 15px;
+    background: none;
+    display: block;
+    width: 100%;
+    margin:0 0 15px 0;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.submitcontainer input {
+    padding: 15px 0;
+    background: black;
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    color: white;
+    border: 0;
+}
+
+.textarea {
+    width: 100%;
+    height: 220px;
+    margin:0 0 15px 0;
+    border: 2px solid black;
+    padding: 15px;
+    background: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+
+.ourstorytext {
+    width: 100%;
+    margin-top: 70px;
+
+}
+
+.ourstorytext p {
+
+    font-size: 1.1em;
+    font-family: Montlight;
+    width: 100%;
+    line-height: 35px;
+}
+
+.ourstorytext h4 {
+    font-family: Montbold;
+    margin: 15px 0;
+    display: block;
+}
+
+.ourstorycolumns {
+    width: 23%;
+    float: left;
+    margin: 0 2% 50px 0;
+
+}
+
+.ourstorycolumns img {
+    width: 100%;
+    height: 200px;
+
+}
+
+.ourstorycolumns p {
+    font-size: 0.8em;
+    margin: 5px 0 0 0;
+
+}
+
+.homecolumntitlebelow {
+    font-size: 1em;
+    font-family: Montbold;
+    margin: 10px 0 0 0;
+}
+
+.mappinkaart {
+    width: 100%;
+    height: 650px;
+}
+
+.meerknop {
+    float: right;
+    display: block;
+    background: #7E7E7E;
+    color: white;
+    float: right;
+    margin-bottom: 20px;
+    padding: 7px 7px;
+    font-size: 0.8em;
+    
+}
+
+.projectpostpre {
+    margin: 80px 0 0 0;
+}
+
+.projectpostpre div:nth-child(n+10) {
+    display: none;
+}
+
+.projectspost  {
+    width: 31.3%;
+    margin: 0 3% 0 0;
+    float: left;   
+}
+
+
+.projectspost a {
+    width: 100%;
+    display: block;
+    
+}
+
+.projectspost a div  {
+    overflow:hidden;
+}
+
+.projectspost a div img {
+    width: 100%;
+     
+    display: block;
+}
+
+.projectspost:nth-child(3n) {
+    margin: 0;
+}
+
+.projectspost a h2 {
+    font-size: 1em;
+    margin: 20px 0 30px 0;
+    font-family: Montbold;
+    
+}
+
+.singleleft {
+    float: left;
+    width: 50%;
+}
+
+.singleleft h2 {
+    margin: 0 0 30px 0;
+}
+
+.singleleft p {
+    margin: 0 45px 0 0;
+    line-height: 25px;
+}
+
+.singleright {
+    float: right;
+    width: 50%;
+}
+
+.singleright div  {
+    width: 49%;
+    margin: 0 1% 0 0;
+    float: left;
+    overflow: hidden;
+}
+
+.singleright div img {
+    width: 100%;
+    display: block;
+}
+
+.meerfotos div  {
+    width: 24.5%;
+    margin: 0 0.5% 0 0;
+    float: left;
+    overflow: hidden;
+}
+
+.meerfotos div img {
+    width: 100%;
+    display: block;
+}
+
+
+
+
+
+
+.workshopcontent p, .muurschildering p {
+    font-size: 1.1em;
+    font-family: Montlight;
+    width: 85%;
+    line-height: 35px;
+    margin: 45px auto 0 auto;
+}
+
+.workshopcontent a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    border: 3px solid black;
+    width: 450px;
+    margin: 45px auto;
+}
+
+.workshopcontent a:hover {
+    font-family: Montbold;
+}
+
+.workshopcontent img, .muurschildering img  {
+    width: 33.3%;
+    float: left;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.workshopcontent strong {
+    font-size: 1.2em;
+    font-family: Montbold;
+}
+
+.muurschildering ol {
+    width: 70%;
+    margin: 45px auto 0 auto;
+    
+}
+
+.muurschildering ol li {
+    font-size: 1.1em;
+    font-family: Montlight;
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+
+.naam img {
+    width: 50%;
+}
+
+.bedrijfslogo img {
+    width: 50%;
+    margin: 45px auto 0 auto;
+    display: block;
+    float:none;
+    height: auto;
+}
+
+.footercontainer {
+    background: black;
+    margin-top: 30px;
+}
+
+footer {
+    clear: both;
+    width: 80%;
+    margin: 0 auto;
+    height: 240px;
+}
+
+footer .footercolumns {
+    width: 20%;
+    float: left;
+    margin: 30px 0 0 0;
+}
+
+footer .footercolumns p {
+    font-size: 0.9em;
+    margin: 0 0 15px 0;
+    color: white;
+}
+
+footer .footercolumns .centerer {
+    width: 150px;
+    margin: 0 auto;
+
+}
+
+footer .footercolumns .centerer2 {
+    width: 102px;
+    
+    position: relative;
+    left: 45%;
+
+}
+
+
+footer .footercolumns .centerertel {
+    width: 150px;
+    float: right;
+}
+
+footer .footercolumns ul {
+    list-style: none;
+    width: 70px;
+    float: right;
+}
+
+footer .footercolumns ul li {
+    margin: 0 0 15px 0;
+}
+
+footer .footercolumns ul li a {
+    font-size: 0.9em;
+    color: white;
+}
+
+
+footer .footercolumns img {
+    width: 21px;
+    display: inline-block;
+}
+
+footer .footercolumns label {
+    font-size: 0.9em;
+    display: block;
+}
+
+footer .footercolumns #footerinput {
+    width: 207px;
+    padding: 5px 7px;
+    font-size: 0.8em;
+    font-family: MontReg;
+    display: block;
+    border: 1px solid black;
+    color: black;
+    margin: 15px 0 0 0;
+}
+
+footer .footercolumns #footersubmit {
+    width: 223px;
+    padding: 5px 0;
+    font-size: 0.8em;
+    background: black;
+    color: white;
+    border: 0;
+    letter-spacing: 1px;
+    margin: 7px 0 0 0;
+}
+
+footer .footercolumns .buskes {
+    width: 80%;
+    display: block;
+}

@@ -45,5 +45,5 @@ Route::get('artist/{artist}', 'ArtistController@single')->name('artist');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('projects', 'ProjectController');
-Route::resource('artists', 'ArtistController');
+Route::resource('projects', 'ProjectController')->middleware('auth');
+Route::resource('artists', 'ArtistController')->middleware('auth');

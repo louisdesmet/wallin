@@ -24,15 +24,15 @@
         <div class="footercontainer">
             <footer>
                 <div class="footercolumns">        
-                    <img class="buskes" src="http://wallinofficial.be/wp-content/themes/wallinyana/img/busjes.png"/>
+                    <img class="buskes" src="{{ asset('img/busjes.png') }}"/>
                 </div>  
                 <div class="footercolumns">
                     <div class="centerer2">
                         <p>Volg ons</p>
                         <div class="socialicons">
-                            <a href="https://www.facebook.com/Wallinofficial/" target="_blank"><img style="margin-right: 3px;" src="http://wallinofficial.be/wp-content/themes/wallinyana/img/FacebookIcon.png"/></a>
-                            <a href="https://www.instagram.com/wallin_9000/" target="_blank"><img style="margin-left: 3px;" src="http://wallinofficial.be/wp-content/themes/wallinyana/img/InstagramIcon.png"/></a>
-                            <a href="https://www.youtube.com/channel/UCGzhR3YXlzZz2kGArfMd0Fg" target="_blank"><img style="margin-left: 3px;" src="http://wallinofficial.be/wp-content/themes/wallinyana/img/youtube.png"/></a>
+                            <a href="https://www.facebook.com/Wallinofficial/" target="_blank"><img style="margin-right: 3px;" src="{{ asset('img/FacebookIcon.png') }}"/></a>
+                            <a href="https://www.instagram.com/wallin_9000/" target="_blank"><img style="margin-left: 3px;" src="{{ asset('img/InstagramIcon.png') }}"/></a>
+                            <a href="https://www.youtube.com/channel/UCGzhR3YXlzZz2kGArfMd0Fg" target="_blank"><img style="margin-left: 3px;" src="{{ asset('img/youtube.png') }}"/></a>
                         </div>
                     </div>
                 </div> 
@@ -65,32 +65,33 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-$(function () {
-    let lowestHeightImage = 0;
-    $('.homeSlider img').each(function (index) {
-        if (index === 0) {
-            lowestHeightImage = $(this).height();
-        } else if (lowestHeightImage > $(this).height()) {
-            lowestHeightImage = $(this).height();
-        }
-    });
-    $(".homeSlider").height(lowestHeightImage + 'px');
-
-    let homeSliderImgAmount = $('.homeSlider img').length;
-    let current = 1;
-    $('#homeSliderImg1').show();
-    window.setInterval(function () {
-        if (homeSliderImgAmount > current) {
-            $('#homeSliderImg' + current).fadeOut(400);
-            current++;
-            $('#homeSliderImg' + current).fadeIn(400);
-        } else {
-            $('#homeSliderImg' + current).fadeOut(400);
-            current = 1;
-            $('#homeSliderImg' + current).fadeIn(400);
-        }
-    }, 5000);
-});
+            $(function () {
+                let homeSliderImgAmount = $('.homeSlider img').length;
+                let current = 1;
+                $('#homeSliderImg1').show();
+                window.setInterval(function () {
+                    if (homeSliderImgAmount > current) {
+                        $('#homeSliderImg' + current).fadeOut(400);
+                        current++;
+                        $('#homeSliderImg' + current).fadeIn(400);
+                    } else {
+                        $('#homeSliderImg' + current).fadeOut(400);
+                        current = 1;
+                        $('#homeSliderImg' + current).fadeIn(400);
+                    }
+                }, 5000);
+            });
+            $( window ).on('load', function() {
+                let lowestHeightImage = 0;
+                $('.homeSlider img').each(function (index) {
+                    if (index === 0) {
+                        lowestHeightImage = $(this).height();
+                    } else if (lowestHeightImage > $(this).height()) {
+                        lowestHeightImage = $(this).height();
+                    }
+                });
+                $(".homeSlider").height(lowestHeightImage + 'px');
+            });
         </script>
     </body>
 </html>

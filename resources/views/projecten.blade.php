@@ -38,7 +38,8 @@
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-            $(function() {
+            $('.projectpostpre').css('visibility', 'hidden');     
+            $( window ).on('load', function() {               
                 let lowestHeightImage = 0;
                 $('.projectpostpre img').each(function(index) {
                     if(index === 0) {
@@ -50,8 +51,8 @@
                 $(".projectspost a div").each(function(index) {
                     $(this).height(lowestHeightImage + 'px');         
                 }); 
-            });
-            
+                $('.projectpostpre').css('visibility', 'visible'); 
+            });            
         </script>
     </body>
 </html>

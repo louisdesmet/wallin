@@ -1,15 +1,15 @@
 <div class="footercontainer">
     <footer>
         <div class="footercolumns">        
-            <img class="buskes" src="http://wallinofficial.be/wp-content/themes/wallinyana/img/busjes.png"/>
+            <img class="buskes" src="{{ asset('img/busjes.png') }}"/>
         </div>  
         <div class="footercolumns">
             <div class="centerer2">
                 <p>Volg ons</p>
                 <div class="socialicons">
-                    <a href="https://www.facebook.com/Wallinofficial/" target="_blank"><img style="margin-right: 3px;" src="http://wallinofficial.be/wp-content/themes/wallinyana/img/FacebookIcon.png"/></a>
-                    <a href="https://www.instagram.com/wallin_9000/" target="_blank"><img style="margin-left: 3px;" src="http://wallinofficial.be/wp-content/themes/wallinyana/img/InstagramIcon.png"/></a>
-                    <a href="https://www.youtube.com/channel/UCGzhR3YXlzZz2kGArfMd0Fg" target="_blank"><img style="margin-left: 3px;" src="http://wallinofficial.be/wp-content/themes/wallinyana/img/youtube.png"/></a>
+                    <a href="https://www.facebook.com/Wallinofficial/" target="_blank"><img style="margin-right: 3px;" src="{{ asset('img/FacebookIcon.png') }}"/></a>
+                    <a href="https://www.instagram.com/wallin_9000/" target="_blank"><img style="margin-left: 3px;" src="{{ asset('img/InstagramIcon.png') }}"/></a>
+                    <a href="https://www.youtube.com/channel/UCGzhR3YXlzZz2kGArfMd0Fg" target="_blank"><img style="margin-left: 3px;" src="{{ asset('img/youtube.png') }}"/></a>
                 </div>
             </div>
         </div> 
@@ -29,12 +29,12 @@
         </div>
         <div class="footercolumns">
             <ul>
-                <li><a href="index.php?page_id=6">Home</a></li>
-                <li><a href="index.php?page_id=701">Projecten</a></li>
-                <li><a href="index.php?page_id=8">Artiesten</a></li> 
-                <li><a href="index.php?page_id=790">Workshops</a></li>
-                <li><a href="index.php?page_id=16">Over ons</a></li>
-                <li><a href="index.php?page_id=12">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projecten">Projecten</a></li>
+                <li><a href="/artiesten">Artiesten</a></li> 
+                <li><a href="/workshops">Workshops</a></li>
+                <li><a href="/over ons">Over ons</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul> 
         </div>
     </footer>

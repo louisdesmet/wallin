@@ -14,10 +14,19 @@
 Route::get('/', function () {
     $homeslider = [];      
     $files = \File::files('img/home_slider');
-    foreach ($files as $path) {
+    $lowestheight = 0;
+    foreach ($files as $index => $path) {
+        
+        list($width, $height) = getimagesize($path);
+        if($index === 0) {
+            $lowestheight = $height;
+        } else {
+            $lowestheight = ($lowestheight > $height ? $height : $lowestheight);
+        }
         $homeslider[] = pathinfo($path);
     }
-    return view('welcome', compact('homeslider'));
+
+    return view('welcome', compact('homeslider', 'lowestheight'));
 });
 Route::get('contact', function () {
     return view('contact');
@@ -47,3 +56,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('projects', 'ProjectController')->middleware('auth');
 Route::resource('artists', 'ArtistController')->middleware('auth');
+Route::post('delete/image', 'HomeController@deleteImage')->name('delete.image');

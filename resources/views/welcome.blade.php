@@ -10,9 +10,7 @@
     <body>
         @include('layouts.nav')
         <div class="homeSlider containerdefault">
-            <img id="homeSliderImg1" src="{{ asset('img/home_slider/Foto-2-slieshow.jpg') }}">                    
-            <img id="homeSliderImg2" src="{{ asset('img/home_slider/Foto-3-slideshow.jpg') }}">
-            <img id="homeSliderImg3" src="{{ asset('img/home_slider/IMG_4878-1.jpg') }}">
+            
         </div>
         <div class="homeContainer containerdefault">
             <h4>ONS VERHAAL</h4>
@@ -64,34 +62,18 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-            $(function () {
-                let homeSliderImgAmount = $('.homeSlider img').length;
-                let current = 1;
-                $('#homeSliderImg1').show();
-                window.setInterval(function () {
-                    if (homeSliderImgAmount > current) {
-                        $('#homeSliderImg' + current).fadeOut(400);
-                        current++;
-                        $('#homeSliderImg' + current).fadeIn(400);
-                    } else {
-                        $('#homeSliderImg' + current).fadeOut(400);
-                        current = 1;
-                        $('#homeSliderImg' + current).fadeIn(400);
-                    }
-                }, 5000);
-            });
-            $( window ).on('load', function() {
-                let lowestHeightImage = 0;
-                $('.homeSlider img').each(function (index) {
-                    if (index === 0) {
-                        lowestHeightImage = $(this).height();
-                    } else if (lowestHeightImage > $(this).height()) {
-                        lowestHeightImage = $(this).height();
-                    }
-                });
-                $(".homeSlider").height(lowestHeightImage + 'px');
-            });
+        <script>   
+            var homesliders = [];
+            @foreach ($homeslider as $slider)
+                homesliders.push('{{  $slider['basename'] }}');
+            @endforeach
+            let counter = 1;
+            $('.homeSlider').css("background-image", "url(img/home_slider/"+ homesliders[0] +")");
+            window.setInterval(function () {
+                $('.homeSlider').css("background-image", "url(img/home_slider/"+ homesliders[counter] +")");
+                counter++;
+                if(counter === 3) { counter = 0}
+            }, 4000);
         </script>
     </body>
 </html>

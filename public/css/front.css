@@ -74,16 +74,14 @@
 .nav ul li {
     display: inline-block;
     position: relative;
-    margin: 0 0 0 2px;
+    margin: 0 0 0 0;
 }
 
 .nav ul li .navlink {
     display: block;
     font-family: Montlight;
-    padding: 6px 10px;
-
+    padding: 6px 5px;
     font-size: 1.2em;
-
 }
 
 .nav ul li a:hover {
@@ -133,27 +131,17 @@
     background: black;
     color: white;
     text-transform: uppercase;
+    font-size: 1em;
 }
 
 .nav ul li .submitwall:hover {
     border:0;
 }
 
-
-
-
-
 .homeSlider {
-    overflow: hidden;
-    margin-top: 5px;
-    position: relative;   
-}
-
-.homeSlider img {
-    width: 100%;
-    display: none;
-    position: absolute;
-    top: 0;
+    margin-top: 5px;  
+    height: 800px;
+    background-size: cover;
 }
 
 .homeContainer h4 {
@@ -328,7 +316,7 @@
 }
 
 .projectpostpre div:nth-child(n+10) {
-    display: none;
+    /*display: none;*/
 }
 
 .projectspost  {
@@ -568,3 +556,110 @@ footer .footercolumns .buskes {
     width: 80%;
     display: block;
 }
+
+@media only screen and (max-width: 1300px) {
+    .homeSlider {
+        height: 600px;
+    }
+    
+   
+
+
+   /* .nav > ul {
+        float: right;
+        margin: 45px 2.63% 0 0;
+    }
+
+    .nav ul li {
+        display: inline-block;
+        position: relative;
+        margin: 0 0 0 2px;
+    }
+
+    .nav ul li .navlink {
+        display: block;
+        font-family: Montlight;
+        padding: 6px 10px;
+
+        font-size: 1.2em;
+
+    }
+
+    .nav ul li a:hover {
+        border-bottom: 2px solid black;
+    }
+
+    .nav ul li ul {
+        display: none;
+        width: 295px;
+        position: absolute;
+        top:30px;
+        left: -50px;
+        background: black;
+
+    }
+
+    .nav ul .muurlink:hover {
+        background: black!important;
+
+    }
+
+    .nav ul .muurlink:hover a {
+        color:white!important;  
+    }
+
+    .nav ul li ul li {
+        float: left;
+
+    }
+
+    .nav ul li ul li a {
+        display: block;
+        font-family: Montlight;
+        padding: 6px;
+        font-size: 1.2em;
+        color: white;
+        border: 0!important;
+
+    }
+
+    .nav ul li:hover ul {
+        display: block;
+
+    }
+
+    .nav ul li .submitwall {
+        background: black;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .nav ul li .submitwall:hover {
+        border:0;
+    }*/
+}
+
+@media only screen and (max-width: 1100px) {
+    .homeSlider {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .homeSlider {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .homeSlider {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .homeSlider {
+        height: 200px;
+    }
+}
+

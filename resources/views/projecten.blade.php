@@ -42,9 +42,10 @@
             $( window ).on('load', function() {               
                 let lowestHeightImage = 0;
                 $('.projectpostpre img').each(function(index) {
+                   
                     if(index === 0) {
                         lowestHeightImage = $(this).height();
-                    } else if(lowestHeightImage > $(this).height()) {
+                    } else if(lowestHeightImage > $(this).height() && $(this).height() !== 0) {
                         lowestHeightImage = $(this).height();
                     }
                 });

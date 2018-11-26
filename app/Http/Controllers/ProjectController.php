@@ -129,7 +129,13 @@ class ProjectController extends Controller {
             $firstblockamount = 6;
         }
         $files = \File::files('img/projects/' . $project->id);
+        
+        $lowestheight = 0;
         foreach ($files as  $index => $path) {
+            
+            list($width, $height) = getimagesize($path);
+            dd($height);
+            $lowestheight = ($lowestheight > $height ? $height : $lowestheight);
             if($index < $firstblockamount) {
                 $firstblocks[] = pathinfo($path);
             } else {
@@ -137,7 +143,7 @@ class ProjectController extends Controller {
             }
             
         }
-        return view('project', compact('project', 'firstblocks', 'secondblocks'));       
+        return view('project', compact('project', 'firstblocks', 'secondblocks', 'lowestheight'));       
     }
 
 }
